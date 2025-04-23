@@ -1,0 +1,83 @@
+{
+  "linking": {
+    "groups": []
+  },
+  "globals": {
+    "undo": [
+      {
+        "command": "tab-closed",
+        "data": {
+          "windowPid": "ef9c56cb-0864-44d3-ab35-9d30ada0f4d7",
+          "position": 1,
+          "active": true,
+          "title": "New Tab",
+          "pinned": false,
+          "url": "tvd://new-tab"
+        }
+      }
+    ]
+  },
+  "app": {
+    "chartWindows": [
+      {
+        "persistentId": "ef9c56cb-0864-44d3-ab35-9d30ada0f4d7",
+        "options": {
+          "windowOptions": {
+            "width": 1280,
+            "height": 937,
+            "minWidth": 500,
+            "minHeight": 350,
+            "show": true,
+            "x": 0,
+            "y": 23,
+            "state": 0
+          },
+          "titleBarOptions": {
+            "showMainMenu": true,
+            "showTabs": true,
+            "showMaximize": true,
+            "showMinimize": true
+          }
+        },
+        "tabs": [
+          {
+            "persistentId": "88cc70ba-2766-40a4-8328-25aeffbf9be5",
+            "active": true,
+            "pinned": false,
+            "title": "000001",
+            "url": "https://www.tradingview.com/chart/nxwCCoJj/",
+            "fullscreen": false,
+            "symbol": {
+              "layoutType": "s",
+              "charts": [
+                {
+                  "active": true,
+                  "interval": "1D",
+                  "symbol": "SSE:000001"
+                }
+              ]
+            }
+          },
+          {
+            "persistentId": "342375e3-6a7a-4576-9e56-2f85a55546c6",
+            "active": false,
+            "pinned": false,
+            "title": "New Tab",
+            "url": "tvd://new-tab",
+            "fullscreen": false
+          }
+        ]
+      }
+    ],
+    "state": {
+      "focusedWindowId": "ef9c56cb-0864-44d3-ab35-9d30ada0f4d7"
+    }
+  },
+  "featureList": {},
+  "new-tab": {
+    "layoutSort": {
+      "sortField": "title",
+      "sortDirection": 0
+    }
+  }
+}
