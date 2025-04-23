@@ -14,5 +14,5 @@ compinit
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias pacmam='sudo pacman'
+alias pacman='sudo pacman'
 alias shutdown='shutdown now'

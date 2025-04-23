@@ -1,9 +1,3 @@
-require "nvchad.options"
-
--- add yours here!
-
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
 -- Search options
 vim.o.incsearch = true
 vim.o.ignorecase = true
@@ -32,5 +26,7 @@ vim.o.softtabstop = 4
 vim.o.tabstop = 4
 
 -- Matching and cursor
+vim.o.showmatch = true
+vim.wo.cursorline = true
 vim.wo.wrap = true
 vim.wo.linebreak = true
