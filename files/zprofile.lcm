@@ -1,0 +1,11 @@
+startx
+
+function px() {
+    export http_proxy=http://127.0.0.1:7890
+    export https_proxy=https://127.0.0.1:7890
+    echo -e "proxy on"
+}
+function dpx() {
+    unset http_proxy https_proxy
+    echo -e "proxy off"
+}

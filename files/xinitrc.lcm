@@ -1,0 +1,13 @@
+xrandr --newmode "1440x1080"  338.50  1440 1560 1720 2000  1080 1083 1087 1177 -hsync +vsync
+xrandr --addmode HDMI-2 1440x1080
+xrandr --output HDMI-2 --mode 1440x1080 
+
+setxkbmap us -v colemak && xset r 66
+xinput --set-prop 10 338 .5
+xinput --set-prop 10 341 0 1 0
+
+cd ~
+picom &
+feh --bg-scale --randomize ~/.wallpapers/* &
+exec dwm
+
