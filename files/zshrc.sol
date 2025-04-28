@@ -12,7 +12,47 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias pacman='sudo pacman'
-alias shutdown='shutdown now'
+bindkey -M vicmd 'n' vi-backward-char
+bindkey -M vicmd 'e' down-line-or-history
+bindkey -M vicmd 'i' up-line-or-history
+bindkey -M vicmd 'o' vi-forward-char
+bindkey -s -M vicmd 'N' '10n'
+bindkey -s -M vicmd 'E' '10e'
+bindkey -s -M vicmd 'I' '10i'
+bindkey -s -M vicmd 'O' '10o'
+
+bindkey -M vicmd 'j' vi-repeat-search
+bindkey -M vicmd 'h' vi-insert
+bindkey -M vicmd 'k' vi-forward-word-end
+bindkey -M vicmd 'l' vi-open-line-below
+bindkey -M vicmd 'J' vi-rev-repeat-search
+bindkey -M vicmd 'H' vi-insert-bol
+bindkey -M vicmd 'K' vi-forward-blank-word-end
+bindkey -M vicmd 'L' vi-open-line-above
+
+alias l='ls --color=auto '
+alias ll='l -al '
+alias grep='grep --color=auto '
+alias pm='pacman'
+alias v='nvim'
+alias shut='shutdown now'
+alias s='sudo '
+alias nf='neofetch'
+
+function px() {
+    s systemctl start clash
+    export http_proxy=http://127.0.0.1:7890
+    export https_proxy=https://127.0.0.1:7890
+    echo -e "proxy on"
+}
+function dpx() {
+    s systemctl stop clash
+    unset http_proxy https_proxy
+    echo -e "proxy off"
+}
+function asd() {
+    setxkbmap us -v colemak && xset r 66
+    xinput --set-prop 11 327 0
+    xinput --set-prop 11 330 0 1 0
+}
+
