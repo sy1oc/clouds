@@ -3,16 +3,25 @@ xrandr --newmode "1280x960"  101.25  1280 1360 1488 1696  960 963 967 996 -hsync
 xrandr --newmode "1440x1080"  129.00  1440 1528 1680 1920  1080 1083 1087 1120 -hsync +vsync
 xrandr --addmode eDP1 1280x960
 xrandr --addmode eDP1 1440x1080
-xrandr --output eDP1 --mode 1440x1080 --set "scaling mode" "Full"
+xrandr --output eDP1 --mode 1280x960 --set "scaling mode" "Full"
 
 # "xset r 66" for caps behaviour
-setxkbmap us -v colemak && xset r 66
 setxkbmap us -v colemak && xset r 66
 xinput --set-prop 11 327 0
 xinput --set-prop 11 330 0 1 0
 xbacklight -set 50
 
+while xsetroot -name " `date | awk 'NR == 1 {
+    print $7, $2, $3, $1
+}'` `uptime | awk 'NR == 1 {
+    print $1
+}'` | `cat /sys/class/power_supply/BAT0/capacity`% "
+do
+    sleep1
+done &
+
+
 cd ~
 picom &
-feh --bg-fill --randomize ~/.wallpaper/* &
+feh --bg-max --randomize ~/.wallpaper/* &
 exec dwm

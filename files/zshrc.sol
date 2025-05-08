@@ -55,4 +55,8 @@ function asd() {
     xinput --set-prop 11 327 0
     xinput --set-prop 11 330 0 1 0
 }
+function wp() {
+    feh --bg-max --randomize ~/.wallpaper/* &
+}
 
+export PATH="/home/sy1oc/.cargo/bin:$PATH"
